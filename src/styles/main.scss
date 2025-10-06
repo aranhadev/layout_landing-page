@@ -1,3 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700&display=swap');
+@import 'variables';
+
 body {
   margin: 0;
+  font-family: $font-family;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+}
+
+.main {
+  max-width: 1260px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px $padding-sizes-small;
+
+  @media (min-width: 744px) {
+    padding: 50px $padding-sizes-medium;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 50px $padding-sizes-large;
+  }
+
+  &__logo {
+    width: 64px;
+    height: 46px;
+
+    @media (min-width: 744px) {
+      width: 87px;
+      height: 65px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: $icon-small-size;
+
+    @media (min-width: 744px) {
+      gap: 55px;
+    }
+  }
+
+  &__iconPhone {
+    height: $icon-small-size;
+    width: $icon-small-size;
+    background: url(../images/Icon-Phone-call.png) center center / cover
+      no-repeat;
+
+    @media (min-width: 744px) {
+      height: $padding-sizes-medium;
+      width: $padding-sizes-medium;
+    }
+  }
+
+  &__iconMenu {
+    height: $icon-small-size;
+    width: $icon-small-size;
+    transition: background $transition;
+    background: url(../images/Icon-Burger-menu.png) center center / cover
+      no-repeat;
+
+    &:hover {
+      background: url(../images/Icon-Burger-menu-hover.png) center center /
+        cover no-repeat;
+    }
+
+    @media (min-width: 744px) {
+      height: $padding-sizes-medium;
+      width: $padding-sizes-medium;
+    }
+  }
+}
+
+.home {
+  background: url(../images/img_main.png) center center / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 568px;
+  color: white;
+
+  @media (min-width: 744px) {
+    height: 840px;
+  }
 }
