@@ -13,6 +13,14 @@ body {
   h6 {
     margin: 0;
   }
+
+  a:hover {
+    color: $hover-color;
+  }
+
+  a:visited {
+    color: $pressed-color;
+  }
 }
 
 .main {
@@ -54,11 +62,41 @@ body {
     }
   }
 
+  &__phone {
+    position: relative;
+    display: flex;
+    gap: 16px;
+
+    &:hover .header__phoneInfo {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__phoneInfo {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+
+    h5 {
+      margin-bottom: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
   &__iconPhone {
     height: $icon-small-size;
     width: $icon-small-size;
-    background: url(../images/Icon-Phone-call.png) center center / cover
-      no-repeat;
 
     @media (min-width: 744px) {
       height: $padding-sizes-medium;
