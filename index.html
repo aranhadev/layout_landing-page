@@ -13,13 +13,38 @@
       rel="stylesheet"
       href="src/styles/main.scss"
     />
+    <link
+      rel="stylesheet"
+      href="src/styles/menu.scss"
+    />
+    <link
+      rel="stylesheet"
+      href="src/styles/home.scss"
+    />
     <script
       src="src/scripts/main.js"
       defer
     ></script>
   </head>
-  <body>
+  <body class="page">
     <main class="main">
+      <div id="menu" class="menu">
+        <div class="menu__top">
+          <a href="#home">
+            <img class="menu__logo" alt="THE MET"
+            src="/src/images/img_logo.png">
+          </a>
+          <a href="#home" class="menu__closeIcon">
+          </a>
+        </div>
+        <nav class="menu__nav">
+          <a href="#home" class="menu__link">Home</a>
+          <a href="#about" class="menu__link">About</a>
+          <a href="#gallery" class="menu__link">Gallery</a>
+          <a href="#visit" class="menu__link">Visit</a>
+          <a href="#contact" class="menu__link">Contact</a>
+        </nav>
+      </div>
       <section id="home" class="home">
         <header class="header">
           <a href="#home">
@@ -39,7 +64,7 @@
                 alt="Phone">
               </a>
             </div>
-            <a class="header__iconMenu" href="#"></a>
+            <a class="header__iconMenu" href="#menu"></a>
           </div>
         </header>
       </section>

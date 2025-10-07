@@ -1,0 +1,69 @@
+@import 'variables';
+
+.menu {
+  position: fixed;          // ← fica fora do fluxo do layout
+  top: 0;
+  width: 100%;
+  max-width: 1260px;            // limita a largura
+  min-height: 100vh;
+  background-color: $main-color;
+  transition:
+    opacity $transition,
+    visibility $transition;
+  overflow: auto;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+
+  @media (min-width: $screen-medium) {
+    min-width: $screen-medium;
+  }
+
+  @media (min-width: $screen-large) {
+    min-width: $screen-large;
+    max-width: 1260px;
+  }
+
+  &__top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: $padding-sizes-small;
+
+    @media (min-width: $screen-medium) {
+      padding: $padding-sizes-medium;
+    }
+
+    @media (min-width: $screen-large) {
+      padding: $padding-sizes-large;
+    }
+  }
+
+  &__logo {
+    width: $logo-width-small;
+    height: $logo-height-small;
+
+    @media (min-width: $screen-medium) {
+      width: $logo-width-medium;
+      height: $logo-height-medium;
+    }
+  }
+
+  &__closeIcon {
+    background: url(../images/Icon-Close.png) center center / cover no-repeat;
+    height: $icon-small-size;
+    width: $icon-small-size;
+
+    @media (min-width: $screen-medium) {
+      height: $icon-medium-size;
+      width: $icon-medium-size;
+    }
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+}
