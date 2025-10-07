@@ -15,6 +15,11 @@
   opacity: 0;
   visibility: hidden;
 
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
   @media (min-width: $screen-medium) {
     min-width: $screen-medium;
   }
@@ -62,8 +67,41 @@
     }
   }
 
-  &:target {
-    opacity: 1;
-    visibility: visible;
+  &__nav {
+    padding: $padding-sizes-small;
+    padding-top: 15px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-medium) {
+      padding: $padding-sizes-medium;
+      padding-top: 0;
+    }
+
+    @media (min-width: $screen-large) {
+      padding: $padding-sizes-large;
+      padding-top: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+
+  &__phoneInfo {
+    color: white;
+
+    h5 {
+      font-size: 16px;
+      margin-bottom: 8px;
+
+      a:hover {
+        color: $hover-color;
+      }
+    }
   }
 }

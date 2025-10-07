@@ -18,10 +18,6 @@ body {
     text-decoration: none;
     color: white;
   }
-
-  a:hover {
-    color: $hover-color;
-  }
 }
 
 .page {
@@ -34,4 +30,20 @@ body {
   max-width: 1260px;
   justify-content: center;
   margin: 0 auto;
+}
+
+.btnSecondary {
+  display: inline-block;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  transition: all $transition;
+
+  &:hover {
+    color: white;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+  }
 }
