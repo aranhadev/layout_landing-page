@@ -1,0 +1,50 @@
+@import 'variables';
+
+.view {
+  padding: $padding-sizes-small;
+
+  @media (min-width: $screen-medium) {
+    padding: $padding-sizes-medium;
+  }
+
+  @media (min-width: $screen-large) {
+    padding: $padding-sizes-large;
+  }
+
+  &__title {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    h4 {
+      color: $main-color;
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 24px;
+
+    // evita overflow horizontal
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__image {
+    max-width: 100%;
+    aspect-ratio: 1 / 1; // mantém sempre quadrado
+    object-fit: cover;
+    display: block;
+    transition: transform $transition;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

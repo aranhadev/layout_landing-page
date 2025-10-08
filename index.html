@@ -21,6 +21,10 @@
       rel="stylesheet"
       href="src/styles/home.scss"
     />
+    <link
+      rel="stylesheet"
+      href="src/styles/view.scss"
+    />
     <script
       src="src/scripts/main.js"
       defer
@@ -39,8 +43,8 @@
         </div>
         <nav class="menu__nav">
           <a href="#home" class="menu__link btnSecondary">Home</a>
-          <a href="#about" class="menu__link btnSecondary">About Us</a>
-          <a href="#gallery" class="menu__link btnSecondary">Now on view</a>
+          <a href="#hours" class="menu__link btnSecondary">About Us</a>
+          <a href="#view" class="menu__link btnSecondary">Now on view</a>
           <a href="#visit" class="menu__link btnSecondary">Explore Online</a>
           <a href="#contact" class="menu__link btnSecondary">Contacts</a>
           <div class="menu__phoneInfo">
@@ -74,6 +78,65 @@
             <a class="header__iconMenu" href="#menu"></a>
           </div>
         </header>
+        <div class="container">
+          <h1>Welcome<br>to The MET</h1>
+        </div>
+      </section>
+      <section id="hours" class="hours">
+        <div class="hours__title">
+          <h5>Plan your visit</h5>
+          <h2>Museum hours</h2>
+        </div>
+        <div class="hours__content">
+          <div class="hours__group">
+            <h3>The Met Fifth Avenue</h3>
+            <div class="hours__list">
+              <div class="hours__itens">
+                <h4>10 am - 5 pm</h4>
+                <h4>10 am - 9 pm</h4>
+                <h4>Closed</h4>
+              </div>
+              <div class="hours__days">
+                <p>Sun, Mon, Tue, Thu</p>
+                <p>Fri, Sat</p>
+                <p>Wen</p>
+              </div>
+            </div>
+            <h4>Closed on</h4>
+            <p>Thanksgiving Day, Dec 25, Jan 1, and the first Monday in May.</p>
+          </div>
+          <div class="hours__group">
+            <h3>The Met Cloisters</h3>
+            <div class="hours__list">
+              <div class="hours__itens">
+                <h4>10 am – 4.30 pm</h4>
+                <h4>Closed</h4>
+              </div>
+              <div class="hours__days">
+                <p>Thu - Tue</p>
+                <p>Wen</p>
+              </div>
+            </div>
+            <h4>Closed on</h4>
+            <p>Thanksgiving Day, Dec 25, Jan 1</p>
+          </div>
+        </div>
+      </section>
+      <section id="view" class="view">
+        <div class="view__title">
+          <h2>Now On View</h2>
+          <p>Explore exhibition gallery guides, videos, articles, and more.</p>
+        </div>
+        <div class="view__item">
+          <div class="view__images">
+            <img class="view__image" alt="A New Look at Old Masters"
+            src="./src/images/88339a46c3d3b0a6063a0ab01dac388423143465.png">
+            <img class="view__image" alt="A New Look at Old Masters"
+            src="./src/images/70124ecf4fc53c75514dfb3e15b48ff669d760ee.png">
+          </div>
+          <h4>A New Look at Old Masters</h4>
+          <p>December 12, 2020 – Through Spring 2023</p>
+        </div>
       </section>
     </main>
   </body>
