@@ -3,14 +3,6 @@
 .view {
   padding: $padding-sizes-small;
 
-  @media (min-width: $screen-medium) {
-    padding: $padding-sizes-medium;
-  }
-
-  @media (min-width: $screen-large) {
-    padding: $padding-sizes-large;
-  }
-
   &__title {
     text-align: center;
     display: grid;
@@ -19,32 +11,56 @@
   }
 
   &__item {
+    margin-bottom: 48px;
+
     h4 {
       color: $main-color;
     }
-  }
 
-  &__images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    margin-bottom: 24px;
+    .view__images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      margin-bottom: 24px;
 
-    // evita overflow horizontal
-    width: 100%;
-    box-sizing: border-box;
-  }
+      // evita overflow horizontal
+      width: 100%;
+      box-sizing: border-box;
 
-  &__image {
-    max-width: 100%;
-    aspect-ratio: 1 / 1; // mantém sempre quadrado
-    object-fit: cover;
-    display: block;
-    transition: transform $transition;
+      .view__image {
+      max-width: 100%;
+      aspect-ratio: 1 / 1; // mantém sempre quadrado
+      object-fit: cover;
+      display: block;
+      transition: transform $transition;
+      align-self: stretch; // garante preenchimento vertical total
 
-    &:hover {
-      transform: scale(1.1);
+      &:hover {
+        transform: scale(1.1);
+        }
+      }
     }
   }
+
+  @media (min-width: $screen-medium) {
+    padding: $padding-sizes-medium;
+
+    .view__image--double {
+
+      /* remove o quadrado e define proporção larga */
+      aspect-ratio: 2 / 1; // mantém proporção responsiva
+      width: 100%; // mantém adaptável dentro do grid
+      height: auto;
+      object-fit: cover;
+
+      /* opcional: se quiser ela ocupar mais espaço no grid */
+      grid-column: span 2;
+    }
+  }
+
+  @media (min-width: $screen-large) {
+    padding: $padding-sizes-large;
+  }
+
 }
