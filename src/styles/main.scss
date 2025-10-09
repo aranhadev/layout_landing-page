@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: $font-family;
+  color: $main-dark;
 
   h1,
   h2,
@@ -43,6 +44,29 @@ body {
   a {
     text-decoration: none;
     color: white;
+  }
+
+  input, textarea {
+    display: inline-block;
+    padding: 14px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F8F8FA;
+    border: 0;
+    font-family: $font-family;
+    color: $main-dark;
+
+    &::placeholder {
+      color: #7E7E83;
+    }
+
+    &:hover {
+      border: solid 1px #D5D7DE;
+    }
+
+    &:focus {
+      border: solid 1px $main-dark;
+    }
   }
 }
 

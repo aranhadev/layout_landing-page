@@ -25,6 +25,10 @@
       rel="stylesheet"
       href="src/styles/view.scss"
     />
+    <link
+      rel="stylesheet"
+      href="src/styles/contact.scss"
+    />
     <script
       src="src/scripts/main.js"
       defer
@@ -186,6 +190,36 @@
           </div>
         </div>
       </section>
+      <section id="contact" class="contact">
+        <h2>Contact us</h2>
+        <div class="contact__content">
+          <div class="contact__items">
+            <div class="contact__item">
+              <h4>The Met Fifth Avenue</h4>
+              <p>Phone</p>
+              <a href="tel:+12125357710">+1 212-535-7710</a>
+              <p>Address</p>
+              <a href="https://maps.app.goo.gl/MxEZkoKAYXu6mNAG8" target="_blank">1000 Fifth Avenue<br>New York, NY 10028</a>
+            </div>
+            <div class="contact__item">
+              <h4>The Met Cloisters</h4>
+              <p>Phone</p>
+              <a href="tel:+12129233700">+1 212-923-3700</a>
+              <p>Address</p>
+              <a href="https://maps.app.goo.gl/2EyV8TWRowZR7YNNA" target="_blank">99 Margaret Corbin Drive<br>Fort Tryon Park<br>New York, NY 10040</a>
+            </div>
+          </div>
+          <div class="contact__form">
+            <form id="form_contact" onsubmit="this.reset(); return false;">
+              <input type="text" placeholder="Name">
+              <input type="email" placeholder="E-mail">
+              <textarea placeholder="Message"></textarea>
+              <button type="submit" class="btnPrimary">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="footer"></footer>
     </main>
   </body>
 </html>
