@@ -3,6 +3,14 @@
 .view {
   padding: $padding-sizes-small;
 
+  @media (min-width: $screen-medium) {
+    padding: $padding-sizes-medium;
+  }
+
+  @media (min-width: $screen-large) {
+    padding: $padding-sizes-large;
+  }
+
   &__title {
     text-align: center;
     display: grid;
@@ -36,6 +44,17 @@
       transition: transform $transition;
       align-self: stretch; // garante preenchimento vertical total
 
+       /* estilo para imagens “duplas” */
+      &.view__image--double {
+        @media (min-width: $screen-medium) {
+          aspect-ratio: 2 / 1;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          grid-column: span 2;
+        }
+      }
+
       &:hover {
         transform: scale(1.1);
         }
@@ -43,24 +62,8 @@
     }
   }
 
-  @media (min-width: $screen-medium) {
-    padding: $padding-sizes-medium;
-
-    .view__image--double {
-
-      /* remove o quadrado e define proporção larga */
-      aspect-ratio: 2 / 1; // mantém proporção responsiva
-      width: 100%; // mantém adaptável dentro do grid
-      height: auto;
-      object-fit: cover;
-
-      /* opcional: se quiser ela ocupar mais espaço no grid */
-      grid-column: span 2;
-    }
+  &__btn {
+    display: flex;
+    justify-content: center;
   }
-
-  @media (min-width: $screen-large) {
-    padding: $padding-sizes-large;
-  }
-
 }

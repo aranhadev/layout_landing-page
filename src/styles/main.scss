@@ -57,6 +57,29 @@ body {
   margin: 0 auto;
 }
 
+.btnPrimary {
+  display: inline-block;
+  background: $main-color;
+  font-family: $font-family;
+  border: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  text-decoration: none;
+  transition: all $transition;
+  padding: 14.5px 58.5px;
+  cursor: pointer;
+
+  &:hover {
+    background: $hover-color;
+  }
+
+  &:active {
+    background: $pressed-color;
+  }
+}
+
 .btnSecondary {
   display: inline-block;
   background: transparent;
