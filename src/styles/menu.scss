@@ -4,7 +4,6 @@
   position: fixed; // ← fica fora do fluxo do layout
   top: 0;
   width: 100%;
-  max-width: 1260px; // limita a largura
   min-height: 100vh;
   background-color: $main-color;
   transition:
@@ -20,14 +19,6 @@
     visibility: visible;
   }
 
-  @media (min-width: $screen-medium) {
-    min-width: $screen-medium;
-  }
-
-  @media (min-width: $screen-large) {
-    min-width: $screen-large;
-    max-width: 1260px;
-  }
 
   &__top {
     position: sticky;

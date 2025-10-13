@@ -2,6 +2,7 @@
 
 .view {
   padding: $padding-sizes-small;
+  justify-self: center;
 
   @media (min-width: $screen-medium) {
     padding: $padding-sizes-medium;
@@ -9,6 +10,8 @@
 
   @media (min-width: $screen-large) {
     padding: $padding-sizes-large;
+    min-width: $screen-large;
+    max-width: 1260px;
   }
 
   &__title {
@@ -97,6 +100,7 @@
   text-align: center;
   justify-content: center;
   padding: $padding-sizes-small;
+  justify-self: center;
 
   @media (min-width: $screen-medium) {
     padding: $padding-sizes-medium;
@@ -104,6 +108,8 @@
 
   @media (min-width: $screen-large) {
     padding: $padding-sizes-large;
+    min-width: $screen-large;
+    max-width: 1260px;
   }
 
   h2 {

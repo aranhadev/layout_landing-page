@@ -5,6 +5,7 @@
   justify-content: center;
   padding: $padding-sizes-small;
   padding-bottom: 100px;
+  justify-self: center;
 
   @media (min-width: $screen-medium) {
     padding: $padding-sizes-medium;
@@ -14,6 +15,8 @@
   @media (min-width: $screen-large) {
     padding: $padding-sizes-large;
     padding-bottom: 150px;
+    min-width: $screen-large;
+    max-width: 1260px;
   }
 
   h2 {
